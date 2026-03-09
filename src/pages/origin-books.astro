@@ -1,0 +1,268 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Origin Books — Ron Diver" description="A content-driven web platform for a century-old bindery entering the direct-to-author market.">
+  <article class="page">
+    <nav class="breadcrumb">
+      <a href="/">Ron Diver</a>
+      <span>/</span>
+      <span>Origin Books</span>
+    </nav>
+
+    <header>
+      <h1>Origin Books</h1>
+      <p class="subtitle">A content-driven web platform for a century-old bindery entering the direct-to-author market.</p>
+      <ul class="tags">
+        <li>book production</li>
+        <li>Astro</li>
+        <li>Stripe</li>
+        <li>print consulting</li>
+      </ul>
+    </header>
+
+    <section>
+      <p class="lede">A consultative platform developed for a 100-year-old commercial bindery launching direct-to-author services. It replaces legacy Shopify infrastructure with an educational funnel that earns trust before asking for the sale.</p>
+    </section>
+
+    <section>
+      <h2>The Problem</h2>
+      <p>Authors and publishers encounter pricing calculators that require specialized knowledge, quote forms with unclear outcomes, and vendor websites that assume prior expertise. The market is full of unqualified buyers, and printers waste resources on projects that aren't ready.</p>
+    </section>
+
+    <section>
+      <h2>Approach</h2>
+      <p>Rather than displaying pricing upfront, the platform guides visitors through structured discovery. It meets them where they are and qualifies their project before connecting them to production.</p>
+      <ul class="features">
+        <li><strong>Readiness assessments</strong> that show authors exactly where their project stands</li>
+        <li><strong>Diagnostic scoring</strong> that identifies gaps in file preparation, binding, and materials</li>
+        <li><strong>Printer matching</strong> that connects qualified projects to vetted production partners</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Capabilities</h2>
+      <ul class="capabilities">
+        <li>Interactive diagnostics with tiered verdicts</li>
+        <li>File quality and specification evaluation</li>
+        <li>Quote-request routing to print partners</li>
+        <li>Stripe-integrated service purchases</li>
+        <li>Schema-validated content collections</li>
+        <li>SEO migration with 31 redirect rules</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Built With</h2>
+      <ul class="tech">
+        <li>Astro</li>
+        <li>Vercel</li>
+        <li>Content Collections</li>
+        <li>Stripe</li>
+        <li>Markdown</li>
+      </ul>
+    </section>
+
+    <section class="status">
+      <p>In active use. Replacing the legacy Shopify storefront.</p>
+      <a href="https://originbooks.com" target="_blank" rel="noopener" class="cta">Visit OriginBooks.com &rarr;</a>
+    </section>
+
+    <nav class="back">
+      <a href="/">&larr; Back</a>
+    </nav>
+  </article>
+</Base>
+
+<style>
+  .page {
+    max-width: 42rem;
+    width: 100%;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    margin-bottom: 3rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .breadcrumb a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .breadcrumb a:hover {
+    color: #fff;
+  }
+
+  header {
+    margin-bottom: 2.5rem;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+  }
+
+  .subtitle {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tags li {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .lede {
+    font-size: 1.15rem;
+  }
+
+  .features,
+  .capabilities {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .features li,
+  .capabilities li {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    padding-left: 1.25rem;
+    position: relative;
+  }
+
+  .features li::before,
+  .capabilities li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  .features li strong {
+    font-weight: 400;
+    color: #fff;
+  }
+
+  .tech {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tech li {
+    font-size: 0.85rem;
+    font-weight: 300;
+    padding: 0.3rem 0.85rem;
+    border-radius: 0.325rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .status {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 2rem;
+  }
+
+  .status p {
+    margin-bottom: 1.25rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .cta {
+    display: inline-block;
+    padding: 0.65rem 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0.375rem;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .cta:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #fff;
+  }
+
+  .back {
+    margin-top: 3rem;
+  }
+
+  .back a {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .back a:hover {
+    color: #fff;
+  }
+
+  @media (max-width: 600px) {
+    .page {
+      padding: 2rem 1.25rem 3rem;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    .subtitle {
+      font-size: 1.05em;
+    }
+  }
+</style>

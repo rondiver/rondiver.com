@@ -4,7 +4,7 @@ interface Props {
   description?: string;
 }
 
-const { title = 'Ron Diver', description = 'Builder, maker, and technologist.' } = Astro.props;
+const { title = 'Ron Diver', description = 'Absurdly curious. Relentlessly optimistic. Lucky dad.' } = Astro.props;
 ---
 
 <!doctype html>
@@ -14,6 +14,8 @@ const { title = 'Ron Diver', description = 'Builder, maker, and technologist.' }
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href="/fonts/lato-300.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin />
     <title>{title}</title>
   </head>
   <body>
@@ -22,13 +24,20 @@ const { title = 'Ron Diver', description = 'Builder, maker, and technologist.' }
 </html>
 
 <style is:global>
-  :root {
-    --text: #1a1a1a;
-    --text-muted: #666;
-    --bg: #fafafa;
-    --accent: #2a2a2a;
-    --border: #e0e0e0;
-    --max-width: 640px;
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('/fonts/lato-300.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/lato-400.woff2') format('woff2');
   }
 
   * {
@@ -37,28 +46,32 @@ const { title = 'Ron Diver', description = 'Builder, maker, and technologist.' }
     box-sizing: border-box;
   }
 
-  html {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    color: var(--text);
-    background: var(--bg);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+  html, body {
+    height: 100%;
   }
 
   body {
-    min-height: 100dvh;
+    font-family: 'Lato', sans-serif;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    min-height: 100dvh;
+    padding: 2rem;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(to top, rgba(255,255,255,0.29), rgba(255,255,255,0.29)),
+                url('/bg.jpg') center/cover no-repeat;
+    z-index: -1;
   }
 
   a {
-    color: var(--text);
-    text-decoration-color: var(--border);
-    text-underline-offset: 3px;
-    transition: text-decoration-color 0.2s;
-  }
-
-  a:hover {
-    text-decoration-color: var(--text);
+    color: inherit;
+    text-decoration: none;
   }
 </style>
